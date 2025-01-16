@@ -21,7 +21,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html
+      lang="en"
+      className={`${GeistSans.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         <ThemeProvider attribute="class">
           <div className="bg-[#F6F6F7] dark:bg-[#161617]">
@@ -29,7 +33,7 @@ export default function RootLayout({
               <AppSidebar />
               <SidebarInset>
                 <div className="flex h-screen flex-col">
-                  <header className="bg-mainpage sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between gap-2 border-b dark:border-[#161617] bg-[#FFFFFF] px-4 dark:bg-[#1b1b1f]">
+                  <header className="bg-mainpage sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between gap-2 border-b bg-[#FFFFFF] px-4 dark:border-[#161617] dark:bg-[#1b1b1f]">
                     <SidebarTrigger className="-ml-1" />
                     <div className="flex items-center gap-2">
                       <ThemeToggle />
@@ -37,6 +41,9 @@ export default function RootLayout({
                       <div>X</div>
                     </div>
                   </header>
+                  <div className="sticky top-0 z-10 px-6">
+                    <SearchBar />
+                  </div>
                   <div className="flex-1 overflow-y-auto">
                     <div className="flex flex-col gap-4 bg-[#FFFFFF] px-6 dark:bg-[#1b1b1f]">
                       {children}
