@@ -1,8 +1,15 @@
 import "~/styles/globals.css";
 import { ThemeProvider } from "next-themes";
-
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import { AppSidebar } from "~/components/app-sidebar";
+import SearchBar from "~/components/search-bar";
+import ThemeToggle from "~/components/theme-toggle";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "~/components/ui/sidebar";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -16,7 +23,27 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <ThemeProvider attribute="class">
+          <div className="">
+            <SidebarProvider>
+              <AppSidebar />
+              <SidebarInset>
+                <header className="flex h-16 shrink-0 items-center justify-between gap-2 border-b px-4">
+                  <SidebarTrigger className="-ml-1" />
+                  <div className="flex items-center gap-2">
+                    <ThemeToggle />
+                    <div>Github</div>
+                    <div>X</div>
+                  </div>
+                </header>
+                <SearchBar />
+                <div className="flex flex-1 flex-col gap-4 px-6">
+                  {children}
+                </div>
+              </SidebarInset>
+            </SidebarProvider>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
