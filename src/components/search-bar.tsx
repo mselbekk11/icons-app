@@ -7,9 +7,9 @@ export default function SearchBar() {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
-    <div className="mx-auto w-full p-6">
+    <div className="mx-auto w-full py-6 bg-[#FFFFFF] dark:bg-[#1b1b1f]">
       <div
-        className={`flex items-center overflow-hidden rounded-lg bg-white transition-all duration-300 ${
+        className={`dark:bg-[#161617] flex items-center overflow-hidden rounded-lg  transition-all duration-300 ${
           isFocused ? "shadow-lg ring-2 ring-blue-500" : "shadow"
         }`}
       >

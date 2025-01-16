@@ -153,11 +153,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <div className="p-4">
           {data.navMain.map((item) => (
             <div key={item.heading}>
-              <Link href={item.url} className="text-md">{item.heading}</Link>
+              <Link href={item.url} className="text-md">
+                {item.heading}
+              </Link>
               <div>
                 <div className="">
                   {item.items.map((item) => (
-                    <div key={item.title} className="text-red-500 pl-2 text-sm">
+                    <div key={item.title} className="pl-2 text-sm">
                       <Link href={item.url}>{item.title}</Link>
                     </div>
                   ))}

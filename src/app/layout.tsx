@@ -24,21 +24,24 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
         <ThemeProvider attribute="class">
-          <div className="">
+          <div className="bg-[#F6F6F7] dark:bg-[#161617]">
             <SidebarProvider>
               <AppSidebar />
               <SidebarInset>
-                <header className="flex h-16 shrink-0 items-center justify-between gap-2 border-b px-4">
-                  <SidebarTrigger className="-ml-1" />
-                  <div className="flex items-center gap-2">
-                    <ThemeToggle />
-                    <div>Github</div>
-                    <div>X</div>
+                <div className="flex h-screen flex-col">
+                  <header className="bg-mainpage sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between gap-2 border-b dark:border-[#161617] bg-[#FFFFFF] px-4 dark:bg-[#1b1b1f]">
+                    <SidebarTrigger className="-ml-1" />
+                    <div className="flex items-center gap-2">
+                      <ThemeToggle />
+                      <div>Github</div>
+                      <div>X</div>
+                    </div>
+                  </header>
+                  <div className="flex-1 overflow-y-auto">
+                    <div className="flex flex-col gap-4 bg-[#FFFFFF] px-6 dark:bg-[#1b1b1f]">
+                      {children}
+                    </div>
                   </div>
-                </header>
-                <SearchBar />
-                <div className="flex flex-1 flex-col gap-4 px-6">
-                  {children}
                 </div>
               </SidebarInset>
             </SidebarProvider>
