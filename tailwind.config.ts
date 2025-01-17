@@ -69,7 +69,12 @@ export default {
   				ring: 'hsl(var(--sidebar-ring))'
   			}
   		}
-  	}
+  	},
+		colors: {
+			'custom-grey': 'hsl(var(--custom-grey))',
+			'custom-dark': 'hsl(var(--custom-dark))',
+			'custom-light': 'hsl(var(--custom-light))',
+		},
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;

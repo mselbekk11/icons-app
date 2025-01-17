@@ -90,7 +90,7 @@ const uniqueCategories = Array.from(
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props}>
+    <Sidebar className="bg-custom-grey dark:bg-custom-dark" {...props}>
       <SidebarHeader>
         <Logo />
       </SidebarHeader>

@@ -21,10 +21,10 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="mx-auto w-full bg-[#FFFFFF] py-6 dark:bg-[#1b1b1f]">
+    <div className="mx-auto w-full py-6">
       <div
-        className={`flex items-center overflow-hidden rounded-lg transition-all duration-300 dark:bg-[#161617] ${
-          isFocused ? "shadow-lg ring-2 ring-blue-500" : "shadow"
+        className={`bg-custom-grey dark:bg-custom-dark flex items-center overflow-hidden rounded-lg border ring-blue-500 transition-all duration-300 hover:ring-2 hover:ring-blue-500 ${
+          isFocused ? "ring-2 ring-blue-500" : ""
         }`}
       >
         <div className="p-3 text-gray-400">
@@ -33,7 +33,7 @@ export default function SearchBar() {
         <Input
           type="search"
           placeholder="Search..."
-          className="w-full px-4 py-2 leading-tight text-black focus:outline-none dark:text-white"
+          className="bg-custom-grey dark:bg-custom-dark w-full px-4 py-2 leading-tight text-black focus:outline-none dark:text-white"
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           onChange={(e) => handleSearch(e.target.value)}

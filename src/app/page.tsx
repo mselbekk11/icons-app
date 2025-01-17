@@ -1,6 +1,3 @@
-// import SearchBar from "~/components/search-bar";
-
-import { Data } from "~/data/data";
 import IconGrid from "~/components/icon-grid";
 
 export default function HomePage() {
