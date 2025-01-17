@@ -4,15 +4,33 @@ import { Card, CardContent } from "~/components/ui/card";
 import { RotateCcw } from "lucide-react";
 import { Slider } from "~/components/ui/slider";
 import { useIconTheme } from "~/context/global-context";
+import { HexColorPicker, HexColorInput } from "react-colorful";
+import { useState } from "react";
 
 export function Customizer() {
+  // Add these styles to your component
+  const colorPickerStyles = {
+    position: "absolute",
+    top: "calc(100% + 18px)",
+    left: "100px",
+    zIndex: 50,
+    boxShadow:
+      "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    borderRadius: "8px",
+    backgroundColor: "white",
+  };
+
   const {
     iconWidth,
     setIconWidth,
     setIconHeight,
     strokeWidth,
     setStrokeWidth,
+    setIconLightTheme,
+    setIconDarkTheme,
   } = useIconTheme();
+  const [showColorPicker, setShowColorPicker] = useState(false);
+  const [selectedColor, setSelectedColor] = useState("#000000");
 
   function handleclick() {
     console.log("I have been clicked");
@@ -37,6 +55,12 @@ export function Customizer() {
     setStrokeWidth(newStroke);
   };
 
+  const handleColorChange = (color: string) => {
+    setSelectedColor(color);
+    setIconLightTheme(color);
+    setIconDarkTheme(color);
+  };
+
   return (
     <Card className="mt-4 shadow-none dark:bg-[#1b1b1f]">
       <div className="flex items-center justify-between pb-0"></div>
@@ -51,9 +75,37 @@ export function Customizer() {
           />
         </div>
         <div className="flex flex-col gap-4">
-          <div className="flex items-center justify-between">
-            <span className="text-xs">Color</span>
-            <div className="flex h-5 w-5 rounded-full bg-[#000]"></div>
+          <div className="relative">
+            <div className="flex items-center justify-between">
+              <div className="text-xs">Color</div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="flex h-5 w-5 cursor-pointer rounded-full"
+                  style={{ backgroundColor: selectedColor }}
+                  onClick={() => setShowColorPicker(!showColorPicker)}
+                />
+                <HexColorInput
+                  color={selectedColor}
+                  onChange={handleColorChange}
+                  prefixed
+                  className="w-20 rounded-md border px-2 py-1 text-xs"
+                />
+              </div>
+            </div>
+
+            {showColorPicker && (
+              <div style={colorPickerStyles}>
+                <div
+                  className="fixed inset-0"
+                  style={{ position: "fixed", inset: 0 }}
+                  onClick={() => setShowColorPicker(false)}
+                />
+                <HexColorPicker
+                  color={selectedColor}
+                  onChange={handleColorChange}
+                />
+              </div>
+            )}
           </div>
           <div className="flex items-center justify-between">
             <span className="text-xs">Stroke width</span>
