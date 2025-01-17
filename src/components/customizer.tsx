@@ -32,26 +32,33 @@ export function Customizer() {
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [selectedColor, setSelectedColor] = useState("#000000");
 
-  function handleclick() {
-    console.log("I have been clicked");
+  function handleReset() {
+    // Reset to initial values from global context
+    setIconLightTheme("white");
+    setIconDarkTheme("black");
+    setIconWidth(24);
+    setIconHeight(24);
+    setStrokeWidth(2);
+    // Reset local state
+    setSelectedColor("#000000");
   }
 
   // Convert size to number for slider
-  const sizeValue = parseInt(iconWidth);
+  const sizeValue = iconWidth;
 
   // Convert stroke width to number for slider
-  const strokeValue = parseFloat(strokeWidth);
+  const strokeValue = strokeWidth;
 
   // Handler for size changes
   const handleSizeChange = (value: number[]) => {
-    const newSize = (value?.[0] ?? 0).toString();
+    const newSize = value?.[0] ?? 0;
     setIconWidth(newSize);
     setIconHeight(newSize); // Keep width and height equal
   };
 
   // Handler for stroke width changes
   const handleStrokeChange = (value: number[]) => {
-    const newStroke = (value?.[0] ?? 0).toString();
+    const newStroke = value?.[0] ?? 0;
     setStrokeWidth(newStroke);
   };
 
@@ -70,7 +77,7 @@ export function Customizer() {
           <RotateCcw
             size={20}
             onClick={() => {
-              handleclick();
+              handleReset();
             }}
           />
         </div>
