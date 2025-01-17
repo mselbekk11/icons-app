@@ -13,6 +13,10 @@ export default function SearchBar() {
   const handleSearch = (value: string) => {
     setSearchQuery(value);
     const filteredResults = searchIcons(Data, value);
+    if (filteredResults instanceof Error) {
+      console.error(filteredResults);
+      return;
+    }
     setFilteredIcons(filteredResults);
   };
 
