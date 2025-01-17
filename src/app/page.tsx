@@ -1,11 +1,12 @@
 // import SearchBar from "~/components/search-bar";
 
 import { Data } from "~/data/data";
+import IconGrid from "~/components/icon-grid";
 
 export default function HomePage() {
   return (
     <div className="min-h-[100vh] flex-1 rounded-xl md:min-h-min">
-      <div className="grid w-full grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2">
+      {/* <div className="grid w-full grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2">
         {Array.from({ length: 40 }, (_, arrayIndex) =>
           Data.map((category, idx) => (
             <div
@@ -19,7 +20,8 @@ export default function HomePage() {
             </div>
           )),
         )}
-      </div>
+      </div> */}
+      <IconGrid />
     </div>
   );
 }

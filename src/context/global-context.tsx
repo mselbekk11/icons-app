@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
+import { IconData } from "~/data/data";
 
 // Define the context type
 type IconThemeContextType = {
@@ -14,6 +15,10 @@ type IconThemeContextType = {
   setIconHeight: (height: string) => void;
   strokeWidth: string;
   setStrokeWidth: (width: string) => void;
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+  filteredIcons: IconData[];
+  setFilteredIcons: (icons: IconData[]) => void;
 };
 
 // Create the context with a default value
@@ -28,6 +33,8 @@ export function IconThemeProvider({ children }: { children: ReactNode }) {
   const [iconWidth, setIconWidth] = useState("25");
   const [iconHeight, setIconHeight] = useState("25");
   const [strokeWidth, setStrokeWidth] = useState("2");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredIcons, setFilteredIcons] = useState<IconData[]>([]);
 
   const value = {
     iconLightTheme,
@@ -40,6 +47,10 @@ export function IconThemeProvider({ children }: { children: ReactNode }) {
     setIconHeight,
     strokeWidth,
     setStrokeWidth,
+    searchQuery,
+    setSearchQuery,
+    filteredIcons,
+    setFilteredIcons,
   };
 
   return (

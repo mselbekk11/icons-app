@@ -1,4 +1,5 @@
 import { Data } from "~/data/data";
+import CategoryGrid from "~/components/category-grid";
 
 export default function Categories() {
   // Get unique categories from all items
@@ -8,7 +9,7 @@ export default function Categories() {
 
   return (
     <div className="min-h-[100vh] flex-1 rounded-xl md:min-h-min">
-      <div className="space-y-8">
+      {/* <div className="space-y-8">
         {uniqueCategories.map((category) => (
           <div key={category} className="space-y-4">
             <h2 className="text-xl font-semibold capitalize">{category}</h2>
@@ -29,7 +30,8 @@ export default function Categories() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
+      <CategoryGrid />
     </div>
   );
 }
