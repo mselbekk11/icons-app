@@ -30,8 +30,8 @@ const IconThemeContext = createContext<IconThemeContextType | undefined>(
 export function IconThemeProvider({ children }: { children: ReactNode }) {
   const [iconLightTheme, setIconLightTheme] = useState("white");
   const [iconDarkTheme, setIconDarkTheme] = useState("black");
-  const [iconWidth, setIconWidth] = useState("25");
-  const [iconHeight, setIconHeight] = useState("25");
+  const [iconWidth, setIconWidth] = useState("24");
+  const [iconHeight, setIconHeight] = useState("24");
   const [strokeWidth, setStrokeWidth] = useState("2");
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredIcons, setFilteredIcons] = useState<IconData[]>([]);
