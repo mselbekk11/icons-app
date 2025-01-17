@@ -27,7 +27,9 @@ export default function CategoryGrid() {
 
         return (
           <div key={category} className="space-y-4">
-            <h2 className="text-xl font-semibold capitalize">{category}</h2>
+            <h2 className="text-xl font-semibold capitalize" id={category}>
+              {category}
+            </h2>
             <div className="grid w-full grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2">
               {categoryIcons.map((item, idx) => (
                 <div
