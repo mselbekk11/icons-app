@@ -21,10 +21,10 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="mx-auto w-full py-6">
+    <div className="mx-auto w-full pt-6">
       <div
-        className={`bg-custom-grey dark:bg-custom-dark flex items-center overflow-hidden rounded-lg border ring-blue-500 transition-all duration-300 hover:ring-2 hover:ring-blue-500 ${
-          isFocused ? "ring-2 ring-blue-500" : ""
+        className={`drop-shadow-md bg-custom-grey dark:bg-custom-dark flex items-center overflow-hidden rounded-lg border ring-blue-500 transition-all duration-300 hover:ring-2 hover:ring-blue-500 ${
+          isFocused ? "ring-2 ring-blue-500" : "" 
         }`}
       >
         <div className="p-3 text-gray-400">

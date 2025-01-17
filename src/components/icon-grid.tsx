@@ -7,7 +7,7 @@ export default function IconGrid() {
   const iconsToDisplay = searchQuery ? filteredIcons : Data;
 
   return (
-    <div className="grid w-full grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2">
+    <div className="pt-6 grid w-full grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2">
       {Array.from({ length: 40 }, (_, arrayIndex) =>
         iconsToDisplay.map((icon, index) => (
           <div

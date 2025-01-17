@@ -39,7 +39,7 @@ export default function RootLayout({
                 <AppSidebar />
                 <SidebarInset>
                   <div className="flex h-screen flex-col">
-                    <header className="bg-mainpage sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between gap-2 border-b bg-[#FFFFFF] px-4 dark:border-[#161617] dark:bg-custom-light">
+                    <header className="bg-mainpage dark:bg-custom-light sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between gap-2 border-b bg-[#FFFFFF] px-4 dark:border-[#161617]">
                       <SidebarTrigger className="-ml-1" />
                       <div className="flex items-center gap-2">
                         <SelectTheme />
@@ -50,10 +50,10 @@ export default function RootLayout({
                         <XIcon />
                       </div>
                     </header>
-                    <div className="sticky top-0 z-10 px-6 dark:bg-custom-light">
+                    <div className="sticky top-0 z-10 px-6 dark:bg-[#1b1b1f]">
                       <SearchBar />
                     </div>
-                    <div className="flex-1 overflow-y-auto bg-[#FFFFFF] dark:bg-custom-light">
+                    <div className="dark:bg-custom-light flex-1 overflow-y-auto bg-[#FFFFFF]">
                       <div className="flex flex-col gap-4 px-6">{children}</div>
                     </div>
                   </div>
