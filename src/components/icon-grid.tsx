@@ -12,7 +12,7 @@ export default function IconGrid() {
         iconsToDisplay.map((icon, index) => (
           <div
             key={index}
-            className="bg-custom-grey dark:bg-custom-dark group relative flex items-center justify-center rounded-lg border p-10 transition-shadow hover:shadow-lg"
+            className="bg-custom-grey dark:bg-custom-dark group relative flex items-center justify-center rounded-lg border transition-shadow hover:shadow-lg w-25 h-24"
           >
             <icon.icon className="h-8 w-8" />
             {/* <span className="mt-2 text-sm">{icon.title}</span> */}

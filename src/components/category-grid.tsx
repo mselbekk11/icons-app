@@ -34,7 +34,7 @@ export default function CategoryGrid() {
               {categoryIcons.map((item, idx) => (
                 <div
                   key={`${category}-${idx}`}
-                  className="group relative flex items-center justify-center rounded-lg border p-10 transition-shadow hover:shadow-lg dark:bg-[#161617]"
+                  className="w-25 group relative flex h-24 items-center justify-center rounded-lg border transition-shadow hover:shadow-lg dark:bg-[#161617]"
                 >
                   <item.icon className="h-8 w-8" />
                   <div className="absolute -bottom-[22px] z-10 hidden truncate rounded-md bg-[#f56565] px-2 py-1 text-xs text-white transition-shadow hover:shadow-lg group-hover:block">
