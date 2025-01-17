@@ -1,5 +1,5 @@
 
-import IconTwo from "~/components/github-icon-two";
+import One from "~/components/icons/1";
 
 export interface IconData {
   title: string;
@@ -13,7 +13,7 @@ export const Data: IconData[] = [
   { 
     title: "Animals", 
     url: "/categories/animals", 
-    icon: IconTwo,
+    icon: One,
     categories: ["nature", "wildlife", "pets"] // Example categories
   },
 //   { title: "Architecture", url: "/categories/architecture", icon: IconTwo },
