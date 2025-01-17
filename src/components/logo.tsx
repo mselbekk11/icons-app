@@ -2,8 +2,9 @@ import { BadgeDollarSign } from "lucide-react";
 
 export default function Logo() {
   return (
-    <div className="flex h-16 items-center justify-center border-b ">
+    <div className="flex gap-2 h-16 items-center justify-center border-b ">
       <BadgeDollarSign />
+      <span className="text-lg">Lord Icon</span>
       {/* <span>MZY Icons</span> */}
     </div>
   );

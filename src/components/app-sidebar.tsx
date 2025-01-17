@@ -133,12 +133,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarHeader>
-        {/* <VersionSwitcher
-          versions={data.versions}
-          defaultVersion={data.versions[0]}
-        /> */}
         <Logo />
-        {/* <SearchForm /> */}
       </SidebarHeader>
       <Customizer />
 
@@ -153,17 +148,18 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <div className="p-4">
           {data.navMain.map((item) => (
             <div key={item.heading}>
-              <Link href={item.url} className="text-md">
-                {item.heading}
-              </Link>
-              <div>
-                <div className="">
-                  {item.items.map((item) => (
-                    <div key={item.title} className="pl-2 text-sm">
-                      <Link href={item.url}>{item.title}</Link>
-                    </div>
-                  ))}
-                </div>
+              <div className="mb-2">
+                <Link href={item.url} className="text-sm font-semibold">
+                  {item.heading}
+                </Link>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                {item.items.map((item) => (
+                  <div key={item.title} className="text-xs">
+                    <Link href={item.url}>{item.title}</Link>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

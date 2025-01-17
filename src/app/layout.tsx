@@ -4,12 +4,16 @@ import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { AppSidebar } from "~/components/app-sidebar";
 import SearchBar from "~/components/search-bar";
-import ThemeToggle from "~/components/theme-toggle";
+// import ThemeToggle from "~/components/theme-toggle";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
 } from "~/components/ui/sidebar";
+import GitHubIcon from "~/components/github-icon";
+import XIcon from "~/components/x-icon";
+import { SelectTheme } from "~/components/select-theme";
+import { Separator } from "~/components/ui/separator";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -36,12 +40,15 @@ export default function RootLayout({
                   <header className="bg-mainpage sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between gap-2 border-b bg-[#FFFFFF] px-4 dark:border-[#161617] dark:bg-[#1b1b1f]">
                     <SidebarTrigger className="-ml-1" />
                     <div className="flex items-center gap-2">
-                      <ThemeToggle />
-                      <div>Github</div>
-                      <div>X</div>
+                      <SelectTheme />
+                        {/* <div className="h-5 w-1 bg-black"/>
+                         */}
+                         <Separator orientation="vertical" className="h-4" />
+                      <GitHubIcon />
+                      <XIcon />
                     </div>
                   </header>
-                  <div className="sticky top-0 z-10 px-6">
+                  <div className="sticky top-0 z-10 px-6 dark:bg-[#1b1b1f]">
                     <SearchBar />
                   </div>
                   <div className="flex-1 overflow-y-auto">
