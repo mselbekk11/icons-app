@@ -12,6 +12,8 @@ type IconThemeContextType = {
   setIconWidth: (width: string) => void;
   iconHeight: string;
   setIconHeight: (height: string) => void;
+  strokeWidth: string;
+  setStrokeWidth: (width: string) => void;
 };
 
 // Create the context with a default value
@@ -21,10 +23,11 @@ const IconThemeContext = createContext<IconThemeContextType | undefined>(
 
 // Create a provider component
 export function IconThemeProvider({ children }: { children: ReactNode }) {
-  const [iconLightTheme, setIconLightTheme] = useState("fill-white");
-  const [iconDarkTheme, setIconDarkTheme] = useState("fill-black");
+  const [iconLightTheme, setIconLightTheme] = useState("white");
+  const [iconDarkTheme, setIconDarkTheme] = useState("black");
   const [iconWidth, setIconWidth] = useState("25");
   const [iconHeight, setIconHeight] = useState("25");
+  const [strokeWidth, setStrokeWidth] = useState("2");
 
   const value = {
     iconLightTheme,
@@ -35,6 +38,8 @@ export function IconThemeProvider({ children }: { children: ReactNode }) {
     setIconDarkTheme,
     setIconWidth,
     setIconHeight,
+    strokeWidth,
+    setStrokeWidth,
   };
 
   return (

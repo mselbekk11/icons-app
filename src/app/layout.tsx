@@ -53,10 +53,8 @@ export default function RootLayout({
                     <div className="sticky top-0 z-10 px-6 dark:bg-[#1b1b1f]">
                       <SearchBar />
                     </div>
-                    <div className="flex-1 overflow-y-auto">
-                      <div className="flex flex-col gap-4 bg-[#FFFFFF] px-6 dark:bg-[#1b1b1f]">
-                        {children}
-                      </div>
+                    <div className="flex-1 overflow-y-auto bg-[#FFFFFF] dark:bg-[#1b1b1f]">
+                      <div className="flex flex-col gap-4 px-6">{children}</div>
                     </div>
                   </div>
                 </SidebarInset>

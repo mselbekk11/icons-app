@@ -5,7 +5,7 @@ import { useIconTheme } from "~/context/global-context";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-export default function IconOne() {
+export default function IconFour() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -32,12 +32,9 @@ export default function IconOne() {
         stroke-linejoin="round"
         className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
       >
-        <circle cx="12" cy="13" r="8" />
-        <path d="M12 9v4l2 2" />
-        <path d="M5 3 2 6" />
-        <path d="m22 6-3-3" />
-        <path d="M6.38 18.7 4 21" />
-        <path d="M17.64 18.67 20 21" />
+        <circle cx="12" cy="12" r="1" />
+        <path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" />
+        <path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" />
       </svg>
     </div>
   );
