@@ -6,7 +6,7 @@ export default function Logo() {
     <div className="flex h-16 items-center justify-center gap-2 border-b">
       {/* <BadgeDollarSign /> */}
       <Lottie animationData={fireOne} className="h-8 w-8" />
-      <span className="text-lg">Fire Icons</span>
+      <span className="text-lg">Fire Icons.</span>
       {/* <span>MZY Icons</span> */}
     </div>
   );
