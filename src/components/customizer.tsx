@@ -69,7 +69,7 @@ export function Customizer() {
   };
 
   return (
-    <Card className="mt-4 shadow-none dark:bg-[#1b1b1f]">
+    <Card className="mt-4 shadow-none transition-all duration-300 hover:ring-2 hover:ring-[#f56565] dark:bg-[#1b1b1f]">
       <div className="flex items-center justify-between pb-0"></div>
       <CardContent className="grid gap-2.5 p-4">
         <div className="flex items-center justify-between">

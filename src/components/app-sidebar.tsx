@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import {
   Sidebar,
@@ -9,8 +11,8 @@ import Logo from "./logo";
 import { Customizer } from "./customizer";
 import Link from "next/link";
 import { Data } from "~/data/data";
+import { usePathname } from "next/navigation";
 
-// const navItems = [
 //   {
 //     title: "Icons",
 //     url: "/",
@@ -89,6 +91,8 @@ const uniqueCategories = Array.from(
 ).sort();
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const pathname = usePathname();
+
   return (
     <Sidebar className="bg-custom-grey dark:bg-custom-dark" {...props}>
       <SidebarHeader>
@@ -100,10 +104,18 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <div className="p-4">
           <div className="mb-2 flex flex-col gap-2">
             <Link href="/">
-              <span className="text-sm font-semibold">Icons</span>
+              <span
+                className={`text-sm font-semibold ${pathname === "/" ? "text-[#f56565]" : ""}`}
+              >
+                Icons
+              </span>
             </Link>
             <Link href="/categories">
-              <span className="text-sm font-semibold">Categories</span>
+              <span
+                className={`text-sm font-semibold ${pathname === "/categories" ? "text-[#f56565]" : ""}`}
+              >
+                Categories
+              </span>
             </Link>
           </div>
           <div className="flex flex-col gap-2">
@@ -111,7 +123,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <Link
                 key={category}
                 href={`/categories/#${category}`}
-                className="text-xs hover:underline"
+                className="text-xs hover:text-[#f56565]"
               >
                 {category}
               </Link>

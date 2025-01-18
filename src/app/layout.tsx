@@ -41,7 +41,7 @@ export default function RootLayout({
                 <SidebarInset>
                   <div className="flex h-screen flex-col">
                     <header className="bg-mainpage dark:bg-custom-light sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between gap-2 border-b bg-[#FFFFFF] px-4 dark:border-[#161617]">
-                      <SidebarTrigger className="-ml-1" />
+                      <SidebarTrigger className="ml-1" />
                       <div className="flex items-center gap-2">
                         <SelectTheme />
                         {/* <div className="h-5 w-1 bg-black"/>

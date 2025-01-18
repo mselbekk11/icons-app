@@ -10,10 +10,10 @@ export default function CategoryGrid() {
   // Use filtered icons if there's a search query, otherwise use all Data
   const iconsToUse = searchQuery ? filteredIcons : Data;
 
-  // Get unique categories from filtered icons
+  // Get unique categories from filtered icons and sort them alphabetically
   const uniqueCategories = Array.from(
     new Set(iconsToUse.flatMap((item) => item.categories)),
-  );
+  ).sort();
 
   return (
     <div className="space-y-8 pt-6">
