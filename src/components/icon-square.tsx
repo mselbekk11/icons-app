@@ -1,5 +1,6 @@
 import type { IconData } from "~/data/data";
 import { Button } from "./ui/button";
+import { toast } from "sonner";
 
 interface IconSquareProps {
   index: number;
@@ -11,7 +12,12 @@ export default function IconSquare({ index, icon }: IconSquareProps) {
     void navigator.clipboard
       .writeText(icon.svg)
       .then(() => {
-        alert("Copied to clipboard!");
+        // alert("Copied to clipboard!");
+        toast.success("SVG has been copied", {
+          duration: 5000, // 5 seconds, use Infinity to make it stay forever
+          position: "top-right",
+          // description: "You can now paste it into your code",
+        });
       })
       .catch((err) => {
         console.error("Failed to copy:", err);

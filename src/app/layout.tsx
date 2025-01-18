@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { AppSidebar } from "~/components/app-sidebar";
 import SearchBar from "~/components/search-bar";
+import { Toaster } from "~/components/ui/sonner";
 // import ThemeToggle from "~/components/theme-toggle";
 import {
   SidebarInset,
@@ -62,6 +63,7 @@ export default function RootLayout({
             </div>
           </IconThemeProvider>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );
