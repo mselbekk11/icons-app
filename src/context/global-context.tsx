@@ -19,6 +19,8 @@ type IconThemeContextType = {
   setSearchQuery: (query: string) => void;
   filteredIcons: IconData[];
   setFilteredIcons: (icons: IconData[]) => void;
+  openMobile: boolean;
+  setOpenMobile: (open: boolean) => void;
 };
 
 // Create the context with a default value
@@ -35,6 +37,7 @@ export function IconThemeProvider({ children }: { children: ReactNode }) {
   const [strokeWidth, setStrokeWidth] = useState(2);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredIcons, setFilteredIcons] = useState<IconData[]>([]);
+  const [openMobile, setOpenMobile] = useState(false);
 
   const value = {
     iconLightTheme,
@@ -51,6 +54,8 @@ export function IconThemeProvider({ children }: { children: ReactNode }) {
     setSearchQuery,
     filteredIcons,
     setFilteredIcons,
+    openMobile,
+    setOpenMobile,
   };
 
   return (

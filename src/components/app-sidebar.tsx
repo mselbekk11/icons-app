@@ -12,6 +12,7 @@ import { Customizer } from "./customizer";
 import Link from "next/link";
 import { Data } from "~/data/data";
 import { usePathname } from "next/navigation";
+import { useIconTheme } from "~/context/global-context";
 
 //   {
 //     title: "Icons",
@@ -92,6 +93,7 @@ const uniqueCategories = Array.from(
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathname = usePathname();
+  const { setOpenMobile } = useIconTheme();
 
   return (
     <Sidebar className="bg-custom-grey dark:bg-custom-dark" {...props}>
@@ -103,14 +105,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <div className="p-4">
           <div className="mb-2 flex flex-col gap-2">
-            <Link href="/">
+            <Link href="/" onClick={() => setOpenMobile(false)}>
               <span
                 className={`text-sm font-semibold ${pathname === "/" ? "text-[#f56565]" : ""}`}
               >
                 Icons
               </span>
             </Link>
-            <Link href="/categories">
+            <Link href="/categories" onClick={() => setOpenMobile(false)}>
               <span
                 className={`text-sm font-semibold ${pathname === "/categories" ? "text-[#f56565]" : ""}`}
               >
@@ -123,6 +125,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <Link
                 key={category}
                 href={`/categories/#${category}`}
+                onClick={() => setOpenMobile(false)}
                 className="text-xs hover:text-[#f56565]"
               >
                 {category}
