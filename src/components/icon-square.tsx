@@ -14,7 +14,7 @@ export default function IconSquare({ index, icon }: IconSquareProps) {
       .then(() => {
         // alert("Copied to clipboard!");
         toast.success("SVG has been copied", {
-          duration: 5000, // 5 seconds, use Infinity to make it stay forever
+          duration: 1000, // 5 seconds, use Infinity to make it stay forever
           position: "top-right",
           // description: "You can now paste it into your code",
         });

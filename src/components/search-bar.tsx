@@ -23,8 +23,8 @@ export default function SearchBar() {
   return (
     <div className="mx-auto w-full pt-6">
       <div
-        className={`drop-shadow-md bg-custom-grey dark:bg-custom-dark flex items-center overflow-hidden rounded-lg border ring-blue-500 transition-all duration-300 hover:ring-2 hover:ring-blue-500 ${
-          isFocused ? "ring-2 ring-blue-500" : "" 
+        className={`bg-custom-grey dark:bg-custom-dark flex items-center overflow-hidden rounded-lg border ring-blue-500 drop-shadow-md transition-all duration-300 hover:ring-2 hover:ring-[#f56565] ${
+          isFocused ? "ring-2 ring-[#f56565]" : ""
         }`}
       >
         <div className="p-3 text-gray-400">
