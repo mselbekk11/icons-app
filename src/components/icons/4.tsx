@@ -27,9 +27,9 @@ export default function IconFour() {
         viewBox="0 0 24 24"
         fill="none"
         stroke={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
-        stroke-width={`${strokeWidth}`}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth={`${strokeWidth}`}
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
       >
         <circle cx="12" cy="12" r="1" />

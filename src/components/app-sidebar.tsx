@@ -107,14 +107,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <div className="mb-2 flex flex-col gap-2">
             <Link href="/" onClick={() => setOpenMobile(false)}>
               <span
-                className={`text-sm font-semibold ${pathname === "/" ? "text-[#f56565]" : ""}`}
+                className={`text-sm font-medium hover:text-[#f56565] dark:hover:text-[#f56565] ${pathname === "/" ? "text-[#f56565]" : "text-[#3c3c43c7] dark:text-[#ebebf599]"}`}
               >
                 Icons
               </span>
             </Link>
             <Link href="/categories" onClick={() => setOpenMobile(false)}>
               <span
-                className={`text-sm font-semibold ${pathname === "/categories" ? "text-[#f56565]" : ""}`}
+                className={`text-sm font-medium hover:text-[#f56565] dark:hover:text-[#f56565] ${pathname === "/categories" ? "text-[#f56565]" : "text-[#3c3c43c7] dark:text-[#ebebf599]"}`}
               >
                 Categories
               </span>
@@ -126,7 +126,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 key={category}
                 href={`/categories/#${category}`}
                 onClick={() => setOpenMobile(false)}
-                className="text-xs hover:text-[#f56565]"
+                className="text-xs text-[#3c3c43c7] hover:text-[#f56565] dark:text-[#ebebf599] dark:hover:text-[#f56565]"
               >
                 {category}
               </Link>

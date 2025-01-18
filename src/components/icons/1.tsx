@@ -27,9 +27,9 @@ export default function IconOne() {
         viewBox="0 0 24 24"
         fill="none"
         stroke={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
-        stroke-width={`${strokeWidth}`}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth={`${strokeWidth}`}
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
       >
         <circle cx="12" cy="13" r="8" />
