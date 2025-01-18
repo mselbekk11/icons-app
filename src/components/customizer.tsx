@@ -101,7 +101,9 @@ export function Customizer() {
             </div>
 
             {showColorPicker && (
-              <div style={colorPickerStyles}>
+              <div
+                style={{ ...colorPickerStyles, position: "absolute" as const }}
+              >
                 <div
                   className="fixed inset-0"
                   style={{ position: "fixed", inset: 0 }}
