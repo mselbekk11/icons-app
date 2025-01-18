@@ -2,6 +2,7 @@
 
 import { useIconTheme } from "~/context/global-context";
 import { Data } from "~/data/data";
+import IconSquare from "./icon-square";
 
 export default function CategoryGrid() {
   const { searchQuery, filteredIcons } = useIconTheme();
@@ -15,7 +16,7 @@ export default function CategoryGrid() {
   );
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 pt-6">
       {uniqueCategories.map((category) => {
         // Get icons for this category
         const categoryIcons = iconsToUse.filter((item) =>
@@ -31,16 +32,17 @@ export default function CategoryGrid() {
               {category}
             </h2>
             <div className="grid w-full grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2">
-              {categoryIcons.map((item, idx) => (
-                <div
-                  key={`${category}-${idx}`}
-                  className="w-25 group relative flex h-24 items-center justify-center rounded-lg border transition-shadow hover:shadow-lg dark:bg-[#161617]"
-                >
-                  <item.icon className="h-8 w-8" />
-                  <div className="absolute -bottom-[22px] z-10 hidden truncate rounded-md bg-[#f56565] px-2 py-1 text-xs text-white transition-shadow hover:shadow-lg group-hover:block">
-                    {item.title}
-                  </div>
-                </div>
+              {categoryIcons.map((icon, idx) => (
+                // <div
+                //   key={`${category}-${idx}`}
+                //   className="w-25 group relative flex h-24 items-center justify-center rounded-lg border transition-shadow hover:shadow-lg dark:bg-[#161617]"
+                // >
+                //   <item.icon className="h-8 w-8" />
+                //   <div className="absolute -bottom-[22px] z-10 hidden truncate rounded-md bg-[#f56565] px-2 py-1 text-xs text-white transition-shadow hover:shadow-lg group-hover:block">
+                //     {item.title}
+                //   </div>
+                // </div>
+                <IconSquare key={idx} index={idx} icon={icon} />
               ))}
             </div>
           </div>
