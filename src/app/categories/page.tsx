@@ -1,12 +1,8 @@
-import { Data } from "~/data/data";
+"use client";
+
 import CategoryGrid from "~/components/category-grid";
 
 export default function Categories() {
-  // Get unique categories from all items
-  // const uniqueCategories = Array.from(
-  //   new Set(Data.flatMap((item) => item.categories)),
-  // );
-
   return (
     <div className="min-h-[100vh] flex-1 rounded-xl md:min-h-min">
       {/* <div className="space-y-8">
