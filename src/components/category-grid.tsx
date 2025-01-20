@@ -7,14 +7,14 @@ import IconSquare from "./icon-square";
 
 export default function CategoryGrid() {
   const { searchQuery, filteredIcons } = useIconTheme();
-  const [mounted, setMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    setIsMounted(true);
   }, []);
 
   // Don't render anything until mounted (client-side)
-  if (!mounted) {
+  if (!isMounted) {
     return null;
   }
 

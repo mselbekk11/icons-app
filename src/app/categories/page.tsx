@@ -1,6 +1,10 @@
 "use client";
 
-import CategoryGrid from "~/components/category-grid";
+import dynamic from "next/dynamic";
+
+const CategoryGrid = dynamic(() => import("~/components/category-grid"), {
+  ssr: false,
+});
 
 export default function Categories() {
   return (
