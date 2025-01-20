@@ -1,11 +1,22 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useIconTheme } from "~/context/global-context";
 import { Data } from "~/data/data";
 import IconSquare from "./icon-square";
 
 export default function CategoryGrid() {
   const { searchQuery, filteredIcons } = useIconTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Don't render anything until mounted (client-side)
+  if (!mounted) {
+    return null;
+  }
 
   // Use filtered icons if there's a search query, otherwise use all Data
   const iconsToUse = searchQuery ? filteredIcons : Data;
