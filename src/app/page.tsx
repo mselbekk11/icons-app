@@ -1,3 +1,5 @@
+"use client";
+
 import IconGrid from "~/components/icon-grid";
 
 export default function HomePage() {
