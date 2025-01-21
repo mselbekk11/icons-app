@@ -1,12 +1,8 @@
 "use client";
 
-import dynamic from "next/dynamic";
+// import CategoryGrid  from "~/components/category-grid";
 
-const CategoryGrid = dynamic(() => import("~/components/category-grid"), {
-  ssr: false,
-});
-
-export default function Categories() {
+export default function CategoryPage() {
   return (
     <div className="min-h-[100vh] flex-1 rounded-xl md:min-h-min">
       {/* <div className="space-y-8">
@@ -31,7 +27,8 @@ export default function Categories() {
           </div>
         ))}
       </div> */}
-      <CategoryGrid />
+      {/* <CategoryGrid /> */}
+      Is it the category grid?
     </div>
   );
 }
