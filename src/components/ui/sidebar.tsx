@@ -4,6 +4,7 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { VariantProps, cva } from "class-variance-authority";
 import { PanelLeft } from "lucide-react";
+import Cookies from "js-cookie";
 
 import { useIsMobile } from "~/hooks/use-mobile";
 import { cn } from "~/lib/utils";
@@ -88,7 +89,17 @@ const SidebarProvider = React.forwardRef<
 
     // Add useEffect for cookie handling
     React.useEffect(() => {
-      document.cookie = `${SIDEBAR_COOKIE_NAME}=${open}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
+      if (typeof window !== "undefined") {
+        // Add check for browser environment
+        try {
+          Cookies.set(SIDEBAR_COOKIE_NAME, open ? "true" : "false", {
+            path: "/",
+            expires: 7, // Use expires instead of maxAge for better compatibility
+          });
+        } catch (error) {
+          console.error("Error setting cookie:", error);
+        }
+      }
     }, [open]);
 
     // Helper to toggle the sidebar.
