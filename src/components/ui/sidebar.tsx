@@ -89,16 +89,14 @@ const SidebarProvider = React.forwardRef<
 
     // Add useEffect for cookie handling
     React.useEffect(() => {
-      if (typeof window !== "undefined") {
-        // Add check for browser environment
-        try {
-          Cookies.set(SIDEBAR_COOKIE_NAME, open ? "true" : "false", {
-            path: "/",
-            expires: 7, // Use expires instead of maxAge for better compatibility
-          });
-        } catch (error) {
-          console.error("Error setting cookie:", error);
-        }
+      try {
+        Cookies.set(SIDEBAR_COOKIE_NAME, open ? "true" : "false", {
+          path: "/",
+          expires: 7,
+          sameSite: "strict",
+        });
+      } catch (error) {
+        console.error("Error setting cookie:", error);
       }
     }, [open]);
 
@@ -108,20 +106,20 @@ const SidebarProvider = React.forwardRef<
     }, [isMobile, setOpen, setOpenMobile]);
 
     // Adds a keyboard shortcut to toggle the sidebar.
-    React.useEffect(() => {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        if (
-          event.key === SIDEBAR_KEYBOARD_SHORTCUT &&
-          (event.metaKey || event.ctrlKey)
-        ) {
-          event.preventDefault();
-          toggleSidebar();
-        }
-      };
+    // React.useEffect(() => {
+    //   const handleKeyDown = (event: KeyboardEvent) => {
+    //     if (
+    //       event.key === SIDEBAR_KEYBOARD_SHORTCUT &&
+    //       (event.metaKey || event.ctrlKey)
+    //     ) {
+    //       event.preventDefault();
+    //       toggleSidebar();
+    //     }
+    //   };
 
-      window.addEventListener("keydown", handleKeyDown);
-      return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [toggleSidebar]);
+    //   window.addEventListener("keydown", handleKeyDown);
+    //   return () => window.removeEventListener("keydown", handleKeyDown);
+    // }, [toggleSidebar]);
 
     // We add a state so that we can do data-state="expanded" or "collapsed".
     // This makes it easier to style the sidebar with Tailwind classes.
