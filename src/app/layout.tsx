@@ -48,7 +48,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <IconThemeProvider>
             <div className="bg-[#F6F6F7] dark:bg-[#161617]">
               <SidebarProvider>

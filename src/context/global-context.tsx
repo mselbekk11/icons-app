@@ -30,17 +30,8 @@ const IconThemeContext = createContext<IconThemeContextType | undefined>(
 
 // Create a provider component
 export function IconThemeProvider({ children }: { children: ReactNode }) {
-  const systemDarkMode =
-    typeof window !== "undefined"
-      ? window.matchMedia("(prefers-color-scheme: dark)").matches
-      : false;
-
-  const [iconLightTheme, setIconLightTheme] = useState(
-    systemDarkMode ? "white" : "black",
-  );
-  const [iconDarkTheme, setIconDarkTheme] = useState(
-    systemDarkMode ? "black" : "white",
-  );
+  const [iconLightTheme, setIconLightTheme] = useState("white");
+  const [iconDarkTheme, setIconDarkTheme] = useState("black");
   const [iconWidth, setIconWidth] = useState(24);
   const [iconHeight, setIconHeight] = useState(24);
   const [strokeWidth, setStrokeWidth] = useState(2);
