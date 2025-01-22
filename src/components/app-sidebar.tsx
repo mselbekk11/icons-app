@@ -7,7 +7,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "~/components/ui/sidebar";
-import Logo from "./logo";
+import LogoNav from "~/components/logo";
 import { Customizer } from "./customizer";
 import Link from "next/link";
 import { Data } from "~/data/data";
@@ -98,7 +98,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar className="bg-custom-grey dark:bg-custom-dark" {...props}>
       <SidebarHeader>
-        {/* <Logo /> */}
+        <LogoNav />
       </SidebarHeader>
       <Customizer />
 
