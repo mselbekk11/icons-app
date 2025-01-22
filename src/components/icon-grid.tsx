@@ -10,7 +10,7 @@ export default function IconGrid() {
 
   return (
     <div className="grid w-full grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 py-6">
-      {Array.from({ length: 40 }, (_, arrayIndex) =>
+      {Array.from({ length: 10 }, (_, arrayIndex) =>
         iconsToDisplay.map((icon, index) => (
           <IconSquare key={index} index={index} icon={icon} />
         )),
