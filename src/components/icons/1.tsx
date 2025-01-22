@@ -2,14 +2,12 @@
 
 import { useIconTheme } from "~/context/global-context";
 
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-export default function IconOne() {
-  const { theme } = useTheme();
+export default function IconOne(props: React.SVGProps<SVGSVGElement>) {
   const [mounted, setMounted] = useState(false);
 
-  const { iconLightTheme, iconDarkTheme, iconWidth, iconHeight, strokeWidth } =
+  const { iconWidth, iconHeight, strokeWidth, currentThemeColor } =
     useIconTheme();
 
   useEffect(() => {
@@ -26,11 +24,12 @@ export default function IconOne() {
         height={`${iconHeight}`}
         viewBox="0 0 24 24"
         fill="none"
-        stroke={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        stroke={currentThemeColor}
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className={currentThemeColor}
+        {...props}
       >
         <circle cx="12" cy="13" r="8" />
         <path d="M12 9v4l2 2" />
