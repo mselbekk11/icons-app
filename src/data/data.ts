@@ -166,7 +166,7 @@ export const Data: IconData[] = [
     title: "Activity",
     icon: Activity,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg>`,
-    categories: ["medical", "account", "social", "science", "multimedia"],
+    categories: ["medical", "account", "shapes", "science", "multimedia"],
     tags: ["pulse", "action", "motion", "movement", "exercise", "fitness", "healthcare", "heart rate monitor", "vital signs", "vitals", "emergency room", "er", "intensive care", "hospital", "defibrillator", "earthquake", "siesmic", "magnitude", "richter scale", "aftershock", "tremor", "shockwave", "audio", "waveform", "synthesizer", "synthesiser", "music"]
   },
   {
@@ -180,7 +180,7 @@ export const Data: IconData[] = [
     title: "Airplay",
     icon: Airplay,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" /><path d="m12 15 5 6H7Z" /></svg>`,
-    categories: ["multimedia", "connectivity", "devices", "brands"],
+    categories: ["multimedia", "devices", "brands"],
     tags: ["stream", "cast", "mirroring", "screen", "monitor", "macos", "osx"]
   },
   {
@@ -215,7 +215,7 @@ export const Data: IconData[] = [
     title: "Alarm Smoke",
     icon: AlarmSmoke,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.87 6.87a8 8 0 1 0 11.26 11.26" /><path d="M19.9 14.25a8 8 0 0 0-9.15-9.15" /><path d="m22 6-3-3" /><path d="M6.26 18.67 4 21" /><path d="m2 2 20 20" /><path d="M4 4 2 6" /></svg>`,
-    categories: ["home", "devices", "travel"],
+    categories: ["home", "devices", "time"],
     tags: ["fire", "alert", "warning", "detector", "carbon monoxide", "safety", "equipment", "amenities"]
   },
   {
@@ -233,7 +233,7 @@ export const Data: IconData[] = [
   <path d="M10 8V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v4" />
   <path d="M20 16v1a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-1" />
   <path d="M14 8V7c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v1" /></svg>`,
-    categories: ["", ""],
+    categories: ["shapes"],
     tags: ["", ""]
   },
   {
@@ -450,245 +450,282 @@ export const Data: IconData[] = [
     title: "Ear",
     icon: Ear,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
-    tags: [""]
+    categories: [
+      "medical",
+      "accessibility"
+    ],
+    tags: [
+      "hearing",
+      "noise",
+      "audio",
+      "accessibility"
+    ]
   },
   {
     title: "Earth Lock",
     icon: EarthLock,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
-    tags: [""]
+    categories: [
+      "security",
+      "development",
+      "devices"
+    ],
+    tags: [
+      "vpn",
+      "private",
+      "privacy",
+      "network",
+      "world",
+      "browser",
+      "security",
+      "encryption",
+      "protection",
+      "connection"
+    ]
   },
   {
     title: "Earth",
     icon: Earth,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
-    tags: [""]
+    categories: [
+      "navigation"
+    ],
+    tags: [
+      "world",
+      "browser",
+      "language",
+      "translate",
+      "globe"
+    ]
   },
   {
     title: "Eclipse",
     icon: Eclipse,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: [
+      "science",
+      "design",
+      "development",
+      "accessibility",
+      "photography"
+    ],
     tags: [""]
   },
   {
     title: "Egg Fried",
     icon: EggFried,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["food-beverage"],
     tags: [""]
   },
   {
     title: "Egg Off",
     icon: EggOff,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["food-beverage"],
     tags: [""]
   },
   {
     title: "Egg",
     icon: Egg,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["food-beverage"],
     tags: [""]
   },
   {
     title: "Ellipsis Vertical",
     icon: EllipsisVertical,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["layout"],
     tags: [""]
   },
   {
     title: "Ellipsis",
     icon: Ellipsis,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["layout"],
     tags: [""]
   },
   {
     title: "Equal Approximatley",
     icon: EqualApproximately,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["layout"],
     tags: [""]
   },
   {
     title: "Flower",
     icon: Flower,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["plants"],
     tags: [""]
   },
   {
     title: "Focus",
     icon: Focus,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["photography"],
     tags: [""]
   },
   {
     title: "Fold Horizontal",
     icon: FoldHorizontal,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["layout"],
     tags: [""]
   },
   {
     title: "Fold Vertical",
     icon: FoldVertical,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["layout"],
     tags: [""]
   },
   {
     title: "Folder Archive",
     icon: FolderArchive,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["files"],
     tags: [""]
   },
   {
     title: "Folder Check",
     icon: FolderCheck,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["files"],
     tags: [""]
   },
   {
     title: "Folder Clock",
     icon: FolderClock,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["files"],
     tags: [""]
   },
   {
     title: "Folder Closed",
     icon: FolderClosed,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["files"],
     tags: [""]
   },
   {
     title: "Folder Code",
     icon: FolderCode,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["files"],
     tags: [""]
   },
   {
     title: "Folder Cog",
     icon: FolderCog,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["files"],
     tags: [""]
   },
   {
     title: "Glass Water",
     icon: GlassWater,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["food-beverage"],
     tags: [""]
   },
   {
     title: "Glasses",
     icon: Glasses,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["accessibility"],
     tags: [""]
   },
   {
     title: "Globe Lock",
     icon: GlobeLock,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["development"],
     tags: [""]
   },
   {
     title: "Globe",
     icon: Globe,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["development"],
     tags: [""]
   },
   {
     title: "Goal",
     icon: Goal,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["gaming"],
     tags: [""]
   },
   {
     title: "Grab",
     icon: Grab,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["layout"],
     tags: [""]
   },
   {
     title: "GraduationCap",
     icon: GraduationCap,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["buildings"],
     tags: [""]
   },
   {
     title: "Grape",
     icon: Grape,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["food-beverage"],
     tags: [""]
   },
   {
     title: "Grid Check",
     icon: GridCheck,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["layout"],
     tags: [""]
   },
   {
     title: "GridPlus",
     icon: GridPlus,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["layout"],
     tags: [""]
   },
   {
     title: "Heart",
     icon: Heart,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["medical"],
     tags: [""]
   },
   {
     title: "Heater",
     icon: Heater,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["devices"],
     tags: [""]
   },
   {
     title: "Hexagon",
     icon: Hexagon,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["shapes"],
     tags: [""]
   },
   {
     title: "Highlighter",
     icon: Highlighter,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["design"],
     tags: [""]
   },
   {
     title: "History",
     icon: History,
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M12 12h.01" /></svg>`,
-    categories: [""],
+    categories: ["time"],
     tags: [""]
   },
 ];

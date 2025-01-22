@@ -27,7 +27,7 @@ export default function CategoryGrid() {
   ).sort();
 
   return (
-    <div className="space-y-8 pt-6">
+    <div className="space-y-8 py-6">
       {uniqueCategories.map((category) => {
         // Get icons for this category
         const categoryIcons = iconsToUse.filter((item) =>
