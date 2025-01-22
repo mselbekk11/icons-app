@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function LogoTwo() {
   return (
-    <Link href="/" target="_blank">
-      <div className="=">
+    <Link href="/">
+      <div className="">
         <svg
           width="25"
           height="25"
@@ -26,9 +26,9 @@ export default function LogoTwo() {
           <path
             d="M40.4973 2C58.7979 8.91904 71.9096 26.3373 72.42 46.8705C72.9947 66.3739 56.822 83 37.2176 83C17.7675 83 2 67.294 2 47.9195C2 35.6293 8.34476 24.8152 17.9495 18.5503C17.1115 24.1844 18.0704 30.041 20.7002 35.1043C34.7334 31.0377 43.5448 16.1245 40.4973 2Z"
             stroke="black"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </div>
