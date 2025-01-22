@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
-import { useTheme } from "next-themes";
 import { IconData } from "~/data/data";
 
 // Define the context type
@@ -22,7 +21,6 @@ type IconThemeContextType = {
   setFilteredIcons: (icons: IconData[]) => void;
   openMobile: boolean;
   setOpenMobile: (open: boolean) => void;
-  currentThemeColor: string;
 };
 
 // Create the context with a default value
@@ -32,7 +30,6 @@ const IconThemeContext = createContext<IconThemeContextType | undefined>(
 
 // Create a provider component
 export function IconThemeProvider({ children }: { children: ReactNode }) {
-  const { theme } = useTheme();
   const [iconLightTheme, setIconLightTheme] = useState("white");
   const [iconDarkTheme, setIconDarkTheme] = useState("black");
   const [iconWidth, setIconWidth] = useState(24);
@@ -41,9 +38,6 @@ export function IconThemeProvider({ children }: { children: ReactNode }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredIcons, setFilteredIcons] = useState<IconData[]>([]);
   const [openMobile, setOpenMobile] = useState(false);
-
-  // Add currentThemeColor to the context value
-  const currentThemeColor = theme === "dark" ? iconLightTheme : iconDarkTheme;
 
   const value = {
     iconLightTheme,
@@ -62,7 +56,6 @@ export function IconThemeProvider({ children }: { children: ReactNode }) {
     setFilteredIcons,
     openMobile,
     setOpenMobile,
-    currentThemeColor,
   };
 
   return (

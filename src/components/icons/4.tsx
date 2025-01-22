@@ -2,12 +2,14 @@
 
 import { useIconTheme } from "~/context/global-context";
 
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export default function IconFour() {
+  const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  const { iconWidth, iconHeight, strokeWidth, currentThemeColor } =
+  const { iconLightTheme, iconDarkTheme, iconWidth, iconHeight, strokeWidth } =
     useIconTheme();
 
   useEffect(() => {
@@ -24,11 +26,11 @@ export default function IconFour() {
         height={`${iconHeight}`}
         viewBox="0 0 24 24"
         fill="none"
-        stroke={currentThemeColor}
+        stroke={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={currentThemeColor}
+        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
       >
         <circle cx="12" cy="12" r="1" />
         <path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" />
