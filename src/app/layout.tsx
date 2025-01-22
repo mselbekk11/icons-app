@@ -16,6 +16,7 @@ import XIcon from "~/components/x-icon";
 import { SelectTheme } from "~/components/select-theme";
 import { Separator } from "~/components/ui/separator";
 import { IconThemeProvider } from "~/context/global-context";
+import Script from "next/script";
 
 // Metadata for SEO
 export const metadata: Metadata = {
@@ -80,6 +81,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Toaster />
       </body>
+      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
     </html>
   );
 }

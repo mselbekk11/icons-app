@@ -14,13 +14,22 @@ export default function IconSquare({ index, icon }: IconSquareProps) {
     void navigator.clipboard
       .writeText(icon.svg)
       .then(() => {
-        // alert("Copied to clipboard!");
         toast.success("SVG has been copied", {
-          duration: 1000, // 5 seconds, use Infinity to make it stay forever
+          duration: 1000,
           position: "top-right",
-          // description: "You can now paste it into your code",
         });
       })
+      // .then(() => {
+      //   toast(
+      //     <div className="bg-[#000] text-sm">
+      //       A custom toast with default styling
+      //     </div>,
+      //     {
+      //       duration: 5000,
+      //       position: "top-right",
+      //     },
+      //   );
+      // })
       .catch((err) => {
         console.error("Failed to copy:", err);
       });
