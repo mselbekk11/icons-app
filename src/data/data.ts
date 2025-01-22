@@ -1,4 +1,3 @@
-import One from "~/components/icons/1";
 import Two from "~/components/icons/2";
 import Three from "~/components/icons/3";
 import Four from "~/components/icons/4";
@@ -17,6 +16,7 @@ import AlarmClockPlus from "~/components/icons/AlarmClockPlus";
 import AlarmClock from "~/components/icons/AlarmClock";
 import AlarmSmoke from "~/components/icons/AlarmSmoke";
 import Album from "~/components/icons/Album";
+import Aligncenterhorizontal from "~/components/icons/align-center-horizontal";
 
 export interface IconData {
   title: string;
@@ -155,5 +155,16 @@ export const Data: IconData[] = [
     svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><polyline points="11 3 11 11 14 8 17 11 17 3" /></svg>`,
     categories: ["photography", "multimedia"],
     tags: ["photo", "book"]
+  },
+  {
+    title: "Align Center Horizontal",
+    icon: Aligncenterhorizontal,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20" />
+  <path d="M10 16v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4" />
+  <path d="M10 8V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v4" />
+  <path d="M20 16v1a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-1" />
+  <path d="M14 8V7c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v1" /></svg>`,
+    categories: ["", ""],
+    tags: ["", ""]
   },
 ];

@@ -1,19 +1,18 @@
 "use client";
 
 import { useIconTheme } from "~/context/global-context";
-
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-export default function IconTwo() {
-  const { theme, setTheme } = useTheme();
+export default function Aligncenterhorizontal() {
+  const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   const { iconLightTheme, iconDarkTheme, iconWidth, iconHeight, strokeWidth } =
     useIconTheme();
 
   useEffect(() => {
-    setMounted(true); // Ensures the theme matches client-side rendering
+    setMounted(true);
   }, []);
 
   if (!mounted) return null;
@@ -32,8 +31,11 @@ export default function IconTwo() {
         strokeLinejoin="round"
         className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
       >
-        <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z" />
-        <path d="M10 2c1 .5 2 2 2 5" />
+        <path d="M2 12h20" />
+        <path d="M10 16v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4" />
+        <path d="M10 8V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v4" />
+        <path d="M20 16v1a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-1" />
+        <path d="M14 8V7c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v1" />
       </svg>
     </div>
   );
