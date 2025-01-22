@@ -98,7 +98,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar className="bg-custom-grey dark:bg-custom-dark" {...props}>
       <SidebarHeader>
-        <Logo />
+        {/* <Logo /> */}
       </SidebarHeader>
       <Customizer />
 
