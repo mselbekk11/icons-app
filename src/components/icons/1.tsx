@@ -26,11 +26,10 @@ export default function IconOne() {
         height={`${iconHeight}`}
         viewBox="0 0 24 24"
         fill="none"
-        stroke={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        stroke={` ${theme === "dark" ? iconDarkTheme : iconLightTheme}`}
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
       >
         <circle cx="12" cy="13" r="8" />
         <path d="M12 9v4l2 2" />

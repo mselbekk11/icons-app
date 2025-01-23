@@ -26,7 +26,7 @@ export default function CandyOff() {
         height={`${iconHeight}`}
         viewBox="0 0 24 24"
         fill="none"
-        stroke={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        stroke={` ${theme === "dark" ? iconDarkTheme : iconLightTheme}`}
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
