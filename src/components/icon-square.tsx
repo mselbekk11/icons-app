@@ -1,8 +1,8 @@
 "use client";
 
 import type { IconData } from "~/data/data";
-import { Button } from "./ui/button";
 import { toast } from "sonner";
+import { useIconTheme } from "~/context/global-context";
 
 interface IconSquareProps {
   index: number;
@@ -10,29 +10,36 @@ interface IconSquareProps {
 }
 
 export default function IconSquare({ index, icon }: IconSquareProps) {
+  const { iconLightTheme, iconWidth, iconHeight, strokeWidth } = useIconTheme();
+
   const copyToClipboard = () => {
-    void navigator.clipboard
-      .writeText(icon.svg)
-      .then(() => {
-        toast.success("SVG has been copied", {
-          duration: 1000,
-          position: "top-right",
+    // Create a temporary div to parse the SVG
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = icon.svg;
+    const svgElement = tempDiv.querySelector("svg");
+
+    if (svgElement) {
+      // Apply current customizations
+      svgElement.setAttribute("width", iconWidth.toString());
+      svgElement.setAttribute("height", iconHeight.toString());
+      svgElement.setAttribute("stroke-width", strokeWidth.toString());
+      svgElement.setAttribute("stroke", iconLightTheme);
+
+      // Get the modified SVG code
+      const modifiedSvg = svgElement.outerHTML;
+
+      void navigator.clipboard
+        .writeText(modifiedSvg)
+        .then(() => {
+          toast.success("Customized SVG has been copied", {
+            duration: 1000,
+            position: "top-right",
+          });
+        })
+        .catch((err) => {
+          console.error("Failed to copy:", err);
         });
-      })
-      // .then(() => {
-      //   toast(
-      //     <div className="bg-[#000] text-sm">
-      //       A custom toast with default styling
-      //     </div>,
-      //     {
-      //       duration: 5000,
-      //       position: "top-right",
-      //     },
-      //   );
-      // })
-      .catch((err) => {
-        console.error("Failed to copy:", err);
-      });
+    }
   };
 
   return (
