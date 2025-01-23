@@ -34,8 +34,8 @@ export function Customizer() {
 
   function handleReset() {
     // Reset to initial values from global context
-    setIconLightTheme("white");
-    setIconDarkTheme("black");
+    setIconLightTheme("#868686");
+    setIconDarkTheme("#868686");
     setIconWidth(24);
     setIconHeight(24);
     setStrokeWidth(2);
