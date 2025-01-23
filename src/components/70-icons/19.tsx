@@ -30,7 +30,7 @@ export default function Candy() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="m9.5 7.5-2 2a4.95 4.95 0 1 0 7 7l2-2a4.95 4.95 0 1 0-7-7Z" />
         <path d="M14 6.5v10" />

@@ -30,7 +30,7 @@ export default function Focus() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <circle cx="12" cy="12" r="3" />
         <path d="M3 7V5a2 2 0 0 1 2-2h2" />

@@ -30,7 +30,7 @@ export default function Glasses() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <circle cx="6" cy="15" r="4" />
         <circle cx="18" cy="15" r="4" />

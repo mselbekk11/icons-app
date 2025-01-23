@@ -30,7 +30,7 @@ export default function FolderCode() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="M10 10.5 8 13l2 2.5" />
         <path d="m14 10.5 2 2.5-2 2.5" />

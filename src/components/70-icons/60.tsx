@@ -30,7 +30,7 @@ export default function Goal() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="M12 13V2l8 4-8 4" />
         <path d="M20.561 10.222a9 9 0 1 1-12.55-5.29" />

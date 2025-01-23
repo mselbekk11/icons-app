@@ -30,7 +30,7 @@ export default function Diameter() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <circle cx="19" cy="19" r="2" />
         <circle cx="5" cy="5" r="2" />

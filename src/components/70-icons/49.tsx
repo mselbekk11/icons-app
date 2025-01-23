@@ -30,7 +30,7 @@ export default function FoldVertical() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="M12 22v-6" />
         <path d="M12 8V2" />

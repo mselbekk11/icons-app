@@ -29,7 +29,7 @@ export default function AArrowUp() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="M3.5 13h6" />
         <path d="m2 16 4.5-9 4.5 9" />

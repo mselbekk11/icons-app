@@ -30,7 +30,7 @@ export default function Ellipsis() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <circle cx="12" cy="12" r="1" />
         <circle cx="19" cy="12" r="1" />

@@ -29,7 +29,7 @@ export default function Accessibility() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <circle cx="16" cy="4" r="1" />
         <path d="m18 19 1-7-6 1" />

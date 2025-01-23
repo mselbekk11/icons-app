@@ -30,7 +30,7 @@ export default function CaptionsOff() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="M10.5 5H19a2 2 0 0 1 2 2v8.5" />
         <path d="M17 11h-.5" />

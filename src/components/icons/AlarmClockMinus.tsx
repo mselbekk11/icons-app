@@ -29,7 +29,7 @@ export default function AlarmClockMinus() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <circle cx="12" cy="13" r="8" />
         <path d="M5 3 2 6" />

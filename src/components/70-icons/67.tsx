@@ -30,7 +30,7 @@ export default function Heater() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="M11 8c2-3-2-3 0-6" />
         <path d="M15.5 8c2-3-2-3 0-6" />

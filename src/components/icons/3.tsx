@@ -30,7 +30,7 @@ export default function IconThree() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="M12 22V8" />
         <path d="M5 12H2a10 10 0 0 0 20 0h-3" />

@@ -30,7 +30,7 @@ export default function Grape() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="M22 5V2l-5.89 5.89" />
         <circle cx="16.6" cy="15.89" r="3" />

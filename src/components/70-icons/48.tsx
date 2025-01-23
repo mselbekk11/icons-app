@@ -30,7 +30,7 @@ export default function FoldHorizontal() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="M2 12h6" />
         <path d="M22 12h-6" />

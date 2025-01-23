@@ -29,7 +29,7 @@ export default function AlarmClockOff() {
         strokeWidth={`${strokeWidth}`}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={` ${theme === "dark" ? iconLightTheme : iconDarkTheme}`}
+        className=""
       >
         <path d="M6.87 6.87a8 8 0 1 0 11.26 11.26" />
         <path d="M19.9 14.25a8 8 0 0 0-9.15-9.15" />
