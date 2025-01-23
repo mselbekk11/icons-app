@@ -11,6 +11,7 @@ import { Switch } from "~/components/ui/switch";
 export function SelectTheme() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     setMounted(true); // Ensures the theme matches client-side rendering
@@ -24,5 +25,11 @@ export function SelectTheme() {
     setTheme(selectedTheme);
   };
 
-  return <Switch onClick={handleThemeChange} checked={theme === "dark"} />;
+  return (
+    <Switch
+      onClick={handleThemeChange}
+      checked={isDark}
+      onCheckedChange={setIsDark}
+    />
+  );
 }
